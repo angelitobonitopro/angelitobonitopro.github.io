@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Estás invitado a mi Cumpleaños!</h1>
+        <p>Faltan para el gran día:</p>
+        <div id="countdown" class="countdown">00:00:00</div>
+        
+        <button class="button" onclick="showLocation()">Ver Ubicación</button>
+        <button class="button" onclick="confirmAttendance()">Confirmar Asistencia</button>
+
+        <div id="location" class="location">
+            <p><strong>Dirección:</strong> colegio cristo rey zona villa copacabana Calle Burgaleta callejon garage negro  1381, Ciudad la paz , País Bolivia </p>
+ <p><a href="https://www.google.com/maps?q=colegio cristo rey 1381,+Ciudad la paz ,+País bolivia" target="_blank">Abrir en Google Maps</a></p>
+            <!-- Aquí mostramos el mapa de Google -->
+            <div id="map"></div>
+        </div>
+
+        <div id="confirmation" class="location">
+            <p>¡Gracias por confirmar tu asistencia!</p>
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" placeholder="Escribe tu nombre">
+            <button class="button" onclick="sendWhatsApp()">Enviar a WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
