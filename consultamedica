@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Médica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginContainer" class="container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">LOGIN</button>
+    </div>
+    
+    <div id="patientContainer" class="container hidden">
+        <h2>Consulta Médica</h2>
+        <input type="text" id="nombre" placeholder="Tu Nombre">
+        <input type="text" id="telefono" placeholder="Tu Número">
+        <textarea id="consulta" placeholder="Describe tu consulta"></textarea>
+        <button onclick="registrarConsulta()">Registrar Consulta</button>
+        <h3>Respuesta del Médico:</h3>
+        <p id="respuesta"></p>
+        <button onclick="logout()">LOGOUT</button>
+    </div>
+    
+    <div id="adminContainer" class="container hidden">
+        <h2>Panel de Administración</h2>
+        <ul id="listaConsultas"></ul>
+        <button onclick="logout()">LOGOUT</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
